@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    width: 400px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.result {
+    width: 100%;
+    height: 80px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    text-align: right;
+    font-size: 36px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+button {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    backdrop-filter: blur(10px);
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Equal button spans vertically across two rows */
+button.equal {
+    grid-row: span 2; /* Vertical span */
+    background-color: rgba(255, 140, 0, 0.8);
+}
+
+button.equal:hover {
+    background-color: rgba(255, 165, 0, 1);
+}
+
+/* Fun mode button spans two columns */
+button.fun {
+    grid-column: span 1;
+    background-color: rgba(0, 128, 128, 0.8);
+}
+
+button.fun:hover {
+    background-color: rgba(0, 150, 150, 1);
+}
+
+/* Make the 0 button span across two columns */
+button.zero {
+    grid-column: span 1;
+}
